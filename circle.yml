@@ -1,3 +1,10 @@
 machine:
   environment:
     XCODE_SCHEME: 'Woodstock'
+
+deployment:
+  staging:
+    branch: master
+    commands:
+      - cd android && bundle exec fastlane android alpha
+      - cd ios && bundle exec fastlane ios beta
