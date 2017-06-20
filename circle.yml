@@ -5,8 +5,11 @@ machine:
     YARN_VERSION: 0.24.6
     # Needed for Android SDK installation bash script (see below)
     ANDROID_HOME: "/usr/local/Cellar/android-sdk"
-    PATH: "${PATH}:${HOME}/.yarn/bin:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin"
+    # PATH: "${PATH}:${HOME}/.yarn/bin:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin"
+    PATH: "${PATH}:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin"
 dependencies:
+  pre:
+    - brew install yarn
   override:
     - yarn
     # The Android Gradle build will need the Android signing keystore keys setup
