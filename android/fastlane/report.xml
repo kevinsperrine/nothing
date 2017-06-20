@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="fastlane.lanes">
+    
+    
+    
+      
+      <testcase classname="fastlane.lanes" name="0: Verifying required fastlane version" time="0.00374">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="1: default_platform" time="0.001677">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="2: cd ../ &amp;&amp; echo &quot;$(awk '{sub(/versionCode [[:digit:]]+$/, &quot;versionCode &quot;$2+1)}1' app/build.gradle)&quot; &gt; app/build.gradle &amp;&amp; cd -" time="0.024432">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="3: gradle" time="10.04958">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="4: supply" time="22.603018">
+        
+      </testcase>
+    
+  </testsuite>
+</testsuites>

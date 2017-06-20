@@ -1,0 +1,2 @@
+json_key_file "app/google-play-1fa5cf0c4880.json" # Path to the json secret file - Follow https://github.com/fastlane/supply#setup to get one
+package_name "com.kevinsperrine.woodstock" # e.g. com.krausefx.app
