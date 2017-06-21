@@ -31,7 +31,6 @@ dependencies:
     - ~/Library/Caches/Yarn
     - node_modules
     - ios/Carthage
-    - /usr/local/share/android-sdk
     - ~/Library/Android/sdk
 
 deployment:
