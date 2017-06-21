@@ -32,11 +32,14 @@ dependencies:
     - ~/.cache/yarn
     - node_modules
     - ios/Carthage
+    - /usr/local/android-sdk-linux/build-tools/23.0.1
+    - /usr/local/android-sdk-linux/platforms/android-23
 deployment:
   beta:
     branch: master
     commands:      
       # Build and deploy Android app
+      - unlink node_modules/react-native/third-party/glog-0.3.4/test-driver
       - cd android && fastlane android alpha
       # Build and deploy iOS app
       - cd ios && fastlane ios beta
