@@ -11,6 +11,9 @@ machine:
 dependencies:
   pre:
     - brew install yarn
+    - brew install carthage
+    - brew cask install fastlane
+    - carthage bootstrap
   override:
     - yarn
     # The Android Gradle build will need the Android signing keystore keys setup
@@ -18,7 +21,6 @@ dependencies:
     - echo -e "SOFARSOUNDS_RELEASE_STORE_PASSWORD=$ANDROID_KEYSTORE_PASSWORD\nSOFARSOUNDS_RELEASE_KEY_PASSWORD=$ANDROID_KEYSTORE_PASSWORD" >> ~/.gradle/gradle.properties
     # Install Gems (fastlane, etc)
     # - bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs=4 --retry=3 --without development
-    - brew cask install fastlane
     # Install node modules
     - yarn install
   cache_directories:
