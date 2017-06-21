@@ -15,7 +15,7 @@ dependencies:
     - brew cask install fastlane
     - ./bin/bootstrap-if-needed.sh
     # Install Android SDK
-    - ./bin/ci-install-android-sdk.sh
+    - ./bin/install-android-sdk.sh
   override:
     - yarn
     # The Android Gradle build will need the Android signing keystore keys setup
