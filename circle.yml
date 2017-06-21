@@ -14,6 +14,8 @@ dependencies:
     - brew upgrade carthage
     - brew cask install fastlane
     - cd ios && carthage bootstrap
+    # Install Android SDK
+    - ./bin/ci-install-android-sdk.sh
   override:
     - yarn
     # The Android Gradle build will need the Android signing keystore keys setup
@@ -32,9 +34,7 @@ dependencies:
 deployment:
   beta:
     branch: master
-    commands:
-      # Install Android SDK
-      - ./ci-install-android-sdk.sh
+    commands:      
       # Build and deploy Android app
       - fastlane android alpha
       # Build and deploy iOS app
