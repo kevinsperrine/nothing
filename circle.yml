@@ -28,12 +28,12 @@ dependencies:
     - yarn install
   cache_directories:
     # Let's speed up the next build by cacheing installed dependencies
-    - ~/.yarn
-    - ~/.cache/yarn
+    - ~/Library/Caches/Yarn
     - node_modules
     - ios/Carthage
-    - /usr/local/android-sdk-linux/build-tools/23.0.1
-    - /usr/local/android-sdk-linux/platforms/android-23
+    - /usr/local/share/android-sdk
+    - ~/Library/Android/sdk
+
 deployment:
   beta:
     branch: master
