@@ -36,6 +36,6 @@ deployment:
     branch: master
     commands:      
       # Build and deploy Android app
-      - fastlane android alpha
+      - cd android && fastlane android alpha
       # Build and deploy iOS app
-      - fastlane ios beta
+      - cd ios && fastlane ios beta
