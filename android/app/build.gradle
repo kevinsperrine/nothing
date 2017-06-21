@@ -122,9 +122,9 @@ android {
     }
     signingConfigs {
         release {
-            storeFile file(MYAPP_RELEASE_STORE_FILE)
+            storeFile file(WOODSTOCK_RELEASE_STORE_FILE)
             storePassword releasekeypass
-            keyAlias MYAPP_RELEASE_KEY_ALIAS
+            keyAlias WOODSTOCK_RELEASE_KEY_ALIAS
             keyPassword releasekeyalias
         }
     }
