@@ -7,6 +7,7 @@ machine:
     ANDROID_HOME: "/usr/local/Cellar/android-sdk"
     # PATH: "${PATH}:${HOME}/.yarn/bin:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin"
     PATH: "${PATH}:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin"
+    XCODE_SCHEME: 'Woodstock'
 dependencies:
   pre:
     - brew install yarn
