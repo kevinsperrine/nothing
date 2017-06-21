@@ -11,7 +11,7 @@ machine:
 dependencies:
   pre:
     - brew install yarn
-    - brew update carthage
+    - brew upgrade carthage
     - brew cask install fastlane
     - carthage bootstrap
   override:
@@ -27,9 +27,7 @@ dependencies:
     # Let's speed up the next build by cacheing installed dependencies
     - ~/.yarn
     - ~/.cache/yarn
-    - vendor/bundle
     - node_modules
-    - ~/Library/Caches/CocoaPods
 deployment:
   beta:
     branch: master
