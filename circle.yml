@@ -13,7 +13,7 @@ dependencies:
     - brew install yarn
     - brew upgrade carthage
     - brew cask install fastlane
-    - carthage bootstrap
+    - cd ios && carthage bootstrap
   override:
     - yarn
     # The Android Gradle build will need the Android signing keystore keys setup
