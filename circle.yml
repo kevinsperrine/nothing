@@ -13,6 +13,7 @@ dependencies:
     - brew install yarn
     - brew upgrade carthage
     - brew cask install fastlane
+    - fastlane update_fastlane
     - ./bin/bootstrap-if-needed.sh
     # Install Android SDK
     - ./bin/install-android-sdk.sh
