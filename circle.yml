@@ -28,15 +28,14 @@ dependencies:
     - ~/.yarn
     - ~/.cache/yarn
     - node_modules
+    - ios/Carthage
 deployment:
   beta:
     branch: master
     commands:
-      # Run our pre-build setup
-      - npm run setup
       # Install Android SDK
       - ./ci-install-android-sdk.sh
       # Build and deploy Android app
-      - bundle exec fastlane android alpha
+      - fastlane android alpha
       # Build and deploy iOS app
-      - bundle exec fastlane ios beta
+      - fastlane ios beta
