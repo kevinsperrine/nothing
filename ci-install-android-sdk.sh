@@ -7,11 +7,10 @@ brew cask install android-sdk
 # ensure PATH is set correctly
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 # install basic SDK tools
-echo y | sdkmanager --update --no-ui --all --filter "android-23"
-echo y | sdkmanager --update --no-ui --all --filter "platform-tools"
-echo y | sdkmanager --update --no-ui --all --filter "tools"
-echo y | sdkmanager --update --no-ui --all --filter "build-tools-23.0.3"
-echo y | sdkmanager --update -u -a -t tool
+sdkmanager --update --licenses "android-23"
+sdkmanager --update --licenses "platform-tools"
+sdkmanager --update --licenses "tools"
+sdkmanager --update --licenses "build-tools-23.0.3"
 # ensure licenses are already accepted
 mkdir -p $ANDROID_HOME/licenses
 cp ./android-licenses/* $ANDROID_HOME/licenses
