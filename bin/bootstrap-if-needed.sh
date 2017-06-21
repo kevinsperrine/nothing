@@ -1,5 +1,5 @@
 #!/bin/sh
 
-if ! cmp -s Cartfile.resolved Carthage/Cartfile.resolved; then
+if ! cmp -s ios/Cartfile.resolved ios/Carthage/Cartfile.resolved; then
   bin/bootstrap.sh
 fi
