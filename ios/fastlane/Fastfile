@@ -32,7 +32,7 @@ platform :ios do
   lane :beta do
     match(
       type: "appstore",
-      git_url: "git@gitlab.com:KevinSPerrine/woodstock-match.git"
+      git_url: "git@github.com:kevinsperrine/nothing-helper.git"
     ) # more information: https://codesigning.guide
     
     increment_build_number(
