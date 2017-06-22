@@ -8,6 +8,7 @@ machine:
     # PATH: "${PATH}:${HOME}/.yarn/bin:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin"
     PATH: "${PATH}:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin"
     XCODE_SCHEME: 'Woodstock'
+    KEYSTORE: ${HOME}/${CIRCLE_PROJECT_REPONAME}/android/app/woodstock.keystore
 dependencies:
   pre:
     - brew install yarn
@@ -15,6 +16,7 @@ dependencies:
     # - brew cask install fastlane
     - fastlane update_fastlane
     - ./bin/bootstrap-if-needed.sh
+    - ./bin/download-keystore.sh
     # Install Android SDK
     - ./bin/install-android-sdk.sh
   override:

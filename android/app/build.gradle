@@ -123,9 +123,9 @@ android {
     signingConfigs {
         release {
             storeFile file(WOODSTOCK_RELEASE_STORE_FILE)
-            storePassword releasekeypass
+            storePassword System.getenv("ANDROID_KEYSTORE_PASSWORD")
             keyAlias WOODSTOCK_RELEASE_KEY_ALIAS
-            keyPassword releasekeyalias
+            keyPassword System.getenv("ANDROID_KEYSTORE_PASSWORD")
         }
     }
     splits {
