@@ -20,8 +20,8 @@ platform :android do
     # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
   end
 
-  def increment_version_code(gradle_build: 'app/build.gradle')
-    sh %Q{'../../bin/increment-android-version.sh #{gradle_build}'}
+  def increment_version_code(gradle_build: 'android/app/build.gradle')
+    sh ../../bin/increment-android-version.sh %Q{"#{gradle_build}"}
   end
 
   desc "Runs all the tests"
@@ -31,7 +31,7 @@ platform :android do
 
   desc "Deploy a new alpha version to the Google Play Store"
   lane :alpha do
-    increment_version_code gradle_build: 'app/build.gradle'
+    increment_version_code gradle_build: 'android/app/build.gradle'
     gradle(
       task: "assemble",
       build_type: "Release"
