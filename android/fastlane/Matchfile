@@ -1,4 +1,4 @@
-git_url "git@gitlab.com:KevinSPerrine/woodstock-match.git"
+git_url "git@github.com:kevinsperrine/nothing-helper.git"
 type "development"
 app_identifier ["com.kevinsperrine.woodstock"]
 username "kperrine@gmail.com"
