@@ -21,7 +21,7 @@ platform :android do
   end
 
   def increment_version_code(gradle_build: 'app/build.gradle')
-    sh %Q{cd ../ && echo "$(awk '{sub(/versionCode [[:digit:]]+$/, "versionCode "$2+1)}1' #{gradle_build})" > #{gradle_build} && cd -}
+    sh ../../bin/increment-android-version.sh
   end
 
   desc "Runs all the tests"
