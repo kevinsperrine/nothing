@@ -12,7 +12,7 @@ machine:
 dependencies:
   pre:
     - brew install yarn
-    - brew upgrade carthage
+    # - brew upgrade carthage
     # - brew cask install fastlane
     - fastlane update_fastlane
     - ./bin/bootstrap-if-needed.sh
