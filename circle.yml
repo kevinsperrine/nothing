@@ -9,6 +9,7 @@ machine:
     PATH: "${PATH}:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin"
     XCODE_SCHEME: 'Woodstock'
     KEYSTORE: ${HOME}/${CIRCLE_PROJECT_REPONAME}/android/app/woodstock.keystore
+    GYM_CODE_SIGNING_IDENTITY: 'iPhone Distribution: Kevin Perrine (5WL53BB8V9)'
 dependencies:
   pre:
     - brew install yarn
