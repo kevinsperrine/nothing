@@ -20,6 +20,7 @@ dependencies:
     - ./bin/download-keystore.sh
     # Install Android SDK
     - ./bin/install-android-sdk.sh
+    - gem environment
   override:
     - yarn
     # The Android Gradle build will need the Android signing keystore keys setup
