@@ -20,7 +20,6 @@ dependencies:
     - ./bin/download-keystore.sh
     # Install Android SDK
     - ./bin/install-android-sdk.sh
-    - brew config
   override:
     - yarn
     # The Android Gradle build will need the Android signing keystore keys setup
@@ -38,6 +37,7 @@ dependencies:
     - ~/.gradle
     - ~/.rubies
     - ~/.gem
+    - /usr/local/Cellar
 deployment:
   beta:
     branch: master
