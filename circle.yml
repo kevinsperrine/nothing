@@ -1,8 +1,7 @@
 machine:
   xcode:
-    version: '8.3'
+    version: "8.3.3"
   environment:
-    YARN_VERSION: 0.24.6
     # Needed for Android SDK installation bash script (see below)
     ANDROID_HOME: "/usr/local/Cellar/android-sdk"
     # PATH: "${PATH}:${HOME}/.yarn/bin:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin"
