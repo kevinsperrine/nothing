@@ -36,7 +36,7 @@ platform :ios do
     ) # more information: https://codesigning.guide
     
     increment_build_number(
-      xcodeproj: './ios/Woodstock.xcodeproj'
+      xcodeproj: 'Woodstock.xcodeproj'
     )
 
     gym(
