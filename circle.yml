@@ -35,9 +35,9 @@ dependencies:
     - ~/Library/Caches/Yarn
     - node_modules
     - ios/Carthage
-    - ~/Library/Android/sdk
-    - /opt/circleci/.rvm/gems
     - ~/.gradle
+    - ~/.rubies
+    - ~/.gem
 deployment:
   beta:
     branch: master
