@@ -11,7 +11,7 @@ machine:
     GYM_CODE_SIGNING_IDENTITY: 'iPhone Distribution: Kevin Perrine (5WL53BB8V9)'
 dependencies:
   pre:
-    - brew install yarn
+    - brew link yarn
     # - brew upgrade carthage
     # - brew cask install fastlane
     - fastlane update_fastlane
