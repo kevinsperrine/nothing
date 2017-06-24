@@ -2,6 +2,7 @@ machine:
   xcode:
     version: "8.3.3"
   environment:
+    YARN_VERSION: 0.24.6
     # Needed for Android SDK installation bash script (see below)
     ANDROID_HOME: "/usr/local/Cellar/android-sdk"
     # PATH: "${PATH}:${HOME}/.yarn/bin:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin"
@@ -11,16 +12,13 @@ machine:
     GYM_CODE_SIGNING_IDENTITY: 'iPhone Distribution: Kevin Perrine (5WL53BB8V9)'
 dependencies:
   pre:
-    - brew link yarn
-    # - brew upgrade carthage
-    # - brew cask install fastlane
+    - brew install yarn
     - fastlane update_fastlane
     - ./bin/bootstrap-if-needed.sh
     - ./bin/download-keystore.sh
     # Install Android SDK
     - ./bin/install-android-sdk.sh
   override:
-    - yarn
     # The Android Gradle build will need the Android signing keystore keys setup
     - mkdir -p ~/.gradle
     - export TERM="dumb"; cd android && ./gradlew lint
@@ -30,13 +28,12 @@ dependencies:
     - yarn install
   cache_directories:
     # Let's speed up the next build by cacheing installed dependencies
-    - ~/Library/Caches/Yarn
-    - node_modules
+    # - ~/Library/Caches/Yarn
+    # - node_modules
     - ios/Carthage
     - ~/.gradle
     # - ~/.rubies
     # - ~/.gem
-    # - /usr/local/Cellar
 deployment:
   beta:
     branch: master
